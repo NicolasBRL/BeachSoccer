@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,8 @@
 
 </head>
 <body>
+    <?php require 'db.php'; ?>
+
     <div class="main__container">
         <header>
             <img src="assets/img/logo.png">
@@ -25,19 +27,39 @@
 
         <main>
             <div class="left__col">
+            <?php 
+                if(isset($_POST['search'])){
+                    $search = $_POST['search'];
+                    $stmt = $pdo->prepare("SELECT * FROM terrains WHERE nom LIKE '%".$search."%'");
+                    $stmt->execute(); 
+                    $terrains = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    if($terrains){
+                        ?>
+                    <h1>Résultat  </h1>
+                    <?php
+                        foreach ($terrains as $row => $terrain) {
+                            echo  "<p>".$terrain['nom']."</p>";
+                        }
+                    }else{
+                        echo "<h1>Aucun terrain trouvé</h1>";
+                    } 
+                }else{
+            ?>
                 <span>Make New Friends over</span>
                 <h1>Beach Football</h1>
                 <p>Challenge your friends and play together a game 
                    of Beach Football at your nearest beach.</p>
 
-                <form class="input__search">
-                    <input type="text" placeholder="Search beach arenas">
+                <form method="POST" class="input__search">
+                    <input type="text" name="search" placeholder="Search beach arenas">
                     <button type="submit">
                         <img src="assets/img/arrow.svg">
                     </button>
                 </form>
 
                 <p class="text_petit"><strong>Popular Beach Arenas:</strong> Virginia, California, Texas</p>
+            <?php } ?>
             </div>
         </main>
     </div>

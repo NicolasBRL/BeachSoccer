@@ -124,10 +124,6 @@ body {
   color: #5E5D5D;
 }
 
-.main__container main .left__col .input__search input[type=text]:focus {
-  border: 1px solid #01D98B;
-}
-
 .main__container main .left__col .input__search button {
   border: 0;
   border-radius: 100%;
