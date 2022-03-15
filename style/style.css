@@ -1,4 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 body {
   margin: 0;
+  padding: 64px;
+  background-color: #F6F3D8;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main__container {
+  height: 100%;
+  background-color: #FFFEF6;
+  -webkit-box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  background-image: url(../assets/img/footeux.png);
+  background-repeat: no-repeat;
+  background-position: bottom -50px right;
+}
+
+.main__container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 50px;
+}
+
+.main__container header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 128px;
+}
+
+.main__container header nav ul li {
+  margin: 0 42px;
+}
+
+.main__container header nav ul li a {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.03em;
+  color: #1E1E1E;
+  text-decoration: none;
+}
+
+.main__container header nav ul li a.active {
+  color: #01D98B;
+}
+
+.main__container main {
+  position: relative;
+}
+
+.main__container main .left__col {
+  max-width: 45%;
+  margin-left: 75px;
+}
+
+.main__container main .left__col span {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 54px;
+  color: #3E3E3E;
+}
+
+.main__container main .left__col h1 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 101px;
+  color: #3E3E3E;
+}
+
+.main__container main .left__col p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  color: #3E3E3E;
+}
+
+.main__container main .left__col p.text_petit {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.main__container main .left__col .input__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 65px;
+}
+
+.main__container main .left__col .input__search input[type=text] {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  border: 1px solid #01D98B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 5px 16px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 50px;
+  letter-spacing: 0.03em;
+  color: #5E5D5D;
+}
+
+.main__container main .left__col .input__search input[type=text]:focus {
+  border: 1px solid #01D98B;
+}
+
+.main__container main .left__col .input__search button {
+  border: 0;
+  border-radius: 100%;
+  background-color: #01D98B;
+  color: #fff;
+  outline: none;
+  width: 64px;
+  height: 64px;
+  margin-left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__container main .left__col .input__search button img {
+  width: 16px;
+}
+
+.main__container main .right__col {
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.tree {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */

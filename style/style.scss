@@ -1,3 +1,151 @@
-@import 'components/variables';
+@import "components/variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-body{margin: 0;}
+body {
+    margin: 0;
+    padding: 64px;
+    background-color: $bg-color;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.main__container{
+        height: 100%;
+    
+    background-color: #FFFEF6;
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+
+    background-image: url(../assets/img/footeux.png);
+    background-repeat: no-repeat;
+    background-position: bottom -50px right;
+
+    header{
+        display: flex;
+        align-items: center;
+        padding: 70px 50px;
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            margin: 0 0 0 128px;
+
+            li{
+                margin: 0 42px;
+
+                a{
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 33px;
+                    letter-spacing: 0.03em;
+                    color: $black;
+                    text-decoration: none;
+
+                    &.active{
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        position: relative;
+        .left__col{
+            max-width: 45%;
+            margin-left: 75px;
+
+            span{
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 54px;
+                color: $text-color;
+            }
+
+            h1{
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 74px;
+                line-height: 101px;
+                color: $text-color;
+            }
+
+            p{
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 42px;
+                letter-spacing: 0.03em;
+                color: $text-color;
+
+                &.text_petit{
+                    font-size: 20px;
+                    margin-top: 16px;
+                }
+            }
+
+            .input__search{
+                display: flex;
+                margin-top: 65px;
+
+                input[type=text]{
+                    flex-basis: 55%;
+
+                    border: 1px solid $green;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
+                    border-radius: 12px;
+                    padding: 5px 16px; 
+
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 50px;
+                    letter-spacing: 0.03em;
+                    color: #5E5D5D;
+
+                    &:focus{border: 1px solid $green;}
+                }
+
+                button{
+                    border: 0;
+                    border-radius: 100%;
+                    background-color: $green;
+                    color: #fff;
+                    outline: none;
+
+                    width: 64px;
+                    height: 64px;
+                    margin-left: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        width: 16px;
+                    }
+                }
+            }
+        }
+
+        .right__col{
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.tree{
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
