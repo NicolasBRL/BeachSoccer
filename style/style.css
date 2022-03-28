@@ -10,7 +10,7 @@ body {
 
 .main__container {
   height: 100%;
-  background-color: #FFFEF6;
+  background-color: #fffef6;
   -webkit-box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
@@ -42,7 +42,7 @@ body {
 }
 
 .main__container header nav ul li a {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -66,7 +66,7 @@ body {
 }
 
 .main__container main .left__col span {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -75,7 +75,7 @@ body {
 }
 
 .main__container main .left__col h1 {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 74px;
@@ -84,7 +84,7 @@ body {
 }
 
 .main__container main .left__col p {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -105,7 +105,7 @@ body {
   margin-top: 50px;
 }
 
-.main__container main .left__col .input__search input[type=text] {
+.main__container main .left__col .input__search select {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
   border: 1px solid #01D98B;
@@ -115,13 +115,16 @@ body {
           box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 5px 16px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1em;
   letter-spacing: 0.03em;
-  color: #5E5D5D;
+  color: #5e5d5d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .main__container main .left__col .input__search button {
@@ -149,7 +152,7 @@ body {
 }
 
 .main__container main .left__col .error {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -160,7 +163,7 @@ body {
 }
 
 .main__container main .left__col .back-link {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
@@ -173,15 +176,40 @@ body {
   text-decoration: underline;
 }
 
-.main__container main .right__col {
-  height: 100%;
-  top: 0;
-  right: 0;
-}
-
 .tree {
   position: absolute;
   bottom: -15px;
   left: 0;
+}
+
+.ui-widget.ui-widget-content {
+  padding: 16px;
+  border: 1px solid #01D98B;
+  -webkit-box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.ui-widget.ui-widget-content .ui-state-focus {
+  border: none;
+  background: transparent;
+  margin: 0;
+}
+
+.ui-widget.ui-widget-content a {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+  color: #5e5d5d;
+  text-decoration: none;
+}
+
+.ui-widget.ui-widget-content a:hover {
+  color: #01D98B;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */
