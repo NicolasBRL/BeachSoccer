@@ -28,38 +28,42 @@
         <main>
             <div class="left__col">
             <?php 
+                // Vérifie si le terrain existe
+                $findTerrain = false;
                 if(isset($_POST['search'])){
                     $search = $_POST['search'];
                     $stmt = $pdo->prepare("SELECT * FROM terrains WHERE nom LIKE '%".$search."%'");
                     $stmt->execute(); 
                     $terrains = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    $findTerrain = $terrains;
+                    
+                } ?>
 
-                    if($terrains){
-                        ?>
+                <?php if($findTerrain) : ?>
                     <h1>Résultat  </h1>
                     <?php
                         foreach ($terrains as $row => $terrain) {
                             echo  "<p>".$terrain['nom']."</p>";
                         }
-                    }else{
-                        echo "<h1>Aucun terrain trouvé</h1>";
-                    } 
-                }else{
-            ?>
-                <span>Make New Friends over</span>
-                <h1>Beach Football</h1>
-                <p>Challenge your friends and play together a game 
-                   of Beach Football at your nearest beach.</p>
+                    ?>
+                <?php else : ?>
+                    <span>Make New Friends over</span>
+                    <h1>Beach Football</h1>
+                    <p>Challenge your friends and play together a game 
+                    of Beach Football at your nearest beach.</p>
 
-                <form method="POST" class="input__search">
-                    <input type="text" name="search" placeholder="Search beach arenas">
-                    <button type="submit">
-                        <img src="assets/img/arrow.svg">
-                    </button>
-                </form>
+                    <form method="POST">
+                        <div class="input__search">
+                            <input type="text" name="search" placeholder="Search beach arenas">
+                            <button type="submit">
+                                <img src="assets/img/arrow.svg">
+                            </button>
+                        </div>
+                        <?php if (isset($_POST['search']) && !$findTerrain) : ?><p class="error">Aucun terrain trouvé</p><?php endif; ?>
+                    </form>
 
-                <p class="text_petit"><strong>Popular Beach Arenas:</strong> Virginia, California, Texas</p>
-            <?php } ?>
+                    <p class="text_petit"><strong>Popular Beach Arenas:</strong> Virginia, California, Texas</p>
+                <?php endif; ?>
             </div>
         </main>
     </div>

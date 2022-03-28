@@ -102,7 +102,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 65px;
+  margin-top: 50px;
 }
 
 .main__container main .left__col .input__search input[type=text] {
@@ -118,8 +118,8 @@ body {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 50px;
+  font-size: 18px;
+  line-height: 1em;
   letter-spacing: 0.03em;
   color: #5E5D5D;
 }
@@ -146,6 +146,17 @@ body {
 
 .main__container main .left__col .input__search button img {
   width: 16px;
+}
+
+.main__container main .left__col .error {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+  color: #ff3333;
+  margin-bottom: 0px;
 }
 
 .main__container main .right__col {

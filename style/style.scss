@@ -93,7 +93,7 @@ body {
 
             .input__search{
                 display: flex;
-                margin-top: 65px;
+                margin-top: 50px;
 
                 input[type=text]{
                     flex-basis: 55%;
@@ -107,8 +107,8 @@ body {
                     font-family: 'Open Sans';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 24px;
-                    line-height: 50px;
+                    font-size: 18px;
+                    line-height: 1em;
                     letter-spacing: 0.03em;
                     color: #5E5D5D;
                 }
@@ -131,6 +131,17 @@ body {
                         width: 16px;
                     }
                 }
+            }
+
+            .error{
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 32px;
+                letter-spacing: 0.03em;
+                color: $red;
+                margin-bottom: 0px;
             }
         }
 
