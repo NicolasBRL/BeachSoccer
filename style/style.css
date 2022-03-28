@@ -159,6 +159,20 @@ body {
   margin-bottom: 0px;
 }
 
+.main__container main .left__col .back-link {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: #3E3E3E;
+  text-decoration: none;
+}
+
+.main__container main .left__col .back-link:hover {
+  color: #01D98B;
+  text-decoration: underline;
+}
+
 .main__container main .right__col {
   height: 100%;
   top: 0;

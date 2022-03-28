@@ -143,6 +143,17 @@ body {
                 color: $red;
                 margin-bottom: 0px;
             }
+
+            .back-link{
+                font-family: 'Open Sans';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 14px;
+                color: $text-color;
+                text-decoration: none;
+
+                &:hover{color: $green; text-decoration: underline;}
+            }
         }
 
         .right__col{

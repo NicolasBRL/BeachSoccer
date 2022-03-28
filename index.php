@@ -40,6 +40,7 @@
                 } ?>
 
                 <?php if($findTerrain) : ?>
+                    <a class="back-link" href=".">Retour</a>
                     <h1>Résultat  </h1>
                     <?php
                         foreach ($terrains as $row => $terrain) {
